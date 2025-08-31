@@ -75,7 +75,9 @@ openai
 tavily-python
 
 # OR run this in terminal
-you can use uv pip aiohtt pandas chainlit python-dotenv playwright openai tavily-python
+you can use 
+
+'''uv pip aiohtt pandas chainlit python-dotenv playwright openai tavily-python'''
 
 
 After installing Playwright, make sure to install browsers:
@@ -95,7 +97,7 @@ Run with Chainlit:
 
 chainlit run main.py
 # chainlit 
-this is a python front end that can easily  use in this frame work 
+this is a lightweight front that easily implemntable
 
 
 This starts a local UI where you can chat with the agent.
@@ -149,4 +151,5 @@ HM Hochschule München	Germany	Master	Program: MSc Computer Science …	https://
 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
 
