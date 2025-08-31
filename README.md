@@ -199,21 +199,6 @@ Technical University Munich,Germany,Master,"MSc Data Engineering – GRE optiona
 
 ---
 
-## 🧑‍💻 Development Commands
-
-Format with Black:
-
-```bash
-uv pip install black
-black main.py
-```
-
-Lint with Flake8:
-
-```bash
-uv pip install flake8
-flake8 main.py
-```
 
 Export results to Excel:
 
@@ -251,5 +236,6 @@ git push origin feature/my-feature
 ```
 
 ---
+
 
 
