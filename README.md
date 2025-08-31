@@ -252,13 +252,4 @@ git push origin feature/my-feature
 
 ---
 
-## 📜 License
 
-This project is licensed under the **MIT License**.
-See [LICENSE](LICENSE) for details.
-
----
-
-👉 This version now **wraps every single command/output in blocks** so they display properly on GitHub.
-
-Do you also want me to include a **full "Demo Walkthrough" section with screenshots or GIFs** of the Chainlit chat interface so readers see how the bot interacts?
