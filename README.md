@@ -1,71 +1,72 @@
-🎓 Master’s Program Finder Agent
+Perfect 👍 you want **every command in the README wrapped inside fenced code blocks** so GitHub shows them properly formatted and copy-paste friendly. I’ll rewrite the README with **all commands and sample outputs in blocks**.
 
-This project is an AI-powered agent that helps students discover Master’s programs worldwide, fetching details such as admission requirements, deadlines, and fees from university websites in real-time.
+Here’s the **final detailed README.md** ⬇️
 
-It combines:
+---
 
-Tavily API
- for web search
+# 🎓 Master’s Program Finder Agent
 
-Google Gemini (OpenAI-compatible API)
- for program extraction
+An **AI-powered agent** that helps students find **Master’s programs** worldwide. It extracts admission requirements, deadlines, and fees from real university websites.
 
-Playwright
- for JavaScript-rendered pages
+This project integrates:
 
-Chainlit
- for interactive chat UI
+* 🌐 **Tavily API** → real-time search engine
+* 🤖 **Google Gemini (OpenAI-compatible API)** → LLM program extraction
+* 🕹 **Playwright** → scrape dynamic JavaScript websites
+* 💬 **Chainlit** → interactive conversational UI
+* 📊 **Pandas** → save/export data
 
-Pandas for saving results to CSV
+---
 
-✨ Features
+## ✨ Features
 
-🔍 Search universities in a specific country offering Master’s programs for a given degree.
+* 🔍 **Search universities** by country and degree
+* 📝 **Scrape admission pages** (both static & JS-based)
+* 🤖 **AI extracts**:
 
-📄 Scrape university websites (supports both static and dynamic pages).
+  * Program name
+  * Admission requirements (tests, GPA, docs, language)
+  * Deadlines
+  * Fees
+  * Official program links
+* 📑 **Exports to CSV** (`master_programs_full.csv`)
+* 💬 Interactive chatbot with **Chainlit**
 
-🤖 Use Gemini LLM to extract structured program details:
+---
 
-Program name
+## ⚡️ Quick Setup
 
-Admission requirements (GPA, documents, tests, language proficiency)
+### 1️⃣ Install [uv](https://docs.astral.sh/uv/)
 
-Application deadlines
-
-Tuition fees
-
-Official program links
-
-📊 Export results into CSV for further analysis.
-
-💬 Interactive chat interface with Chainlit.
-
-⚡️ Setup Instructions
-1. Install uv
-
-This project uses uv
- for managing environments.
-
-# Install uv (if not already installed)
+```bash
 pip install uv
+```
 
-2. Create a new environment
+### 2️⃣ Create a new environment
+
+```bash
 uv venv
+```
 
-3. Activate environment
-# On Linux/Mac
+### 3️⃣ Activate the environment
+
+```bash
+# Linux / macOS
 source .venv/bin/activate
 
-# On Windows (PowerShell)
+# Windows PowerShell
 .venv\Scripts\Activate
+```
 
-4. Install dependencies
+### 4️⃣ Install dependencies
+
+```bash
 uv pip install -r requirements.txt
+```
 
-📦 Dependencies
+> If you don’t have `requirements.txt` yet, create it:
 
-Create a requirements.txt with:
-
+```txt
 aiohttp
 pandas
 chainlit
@@ -73,83 +74,191 @@ python-dotenv
 playwright
 openai
 tavily-python
+```
 
-# OR run this in terminal
-you can use 
+### 5️⃣ Install Playwright browsers
 
-'''uv pip aiohtt pandas chainlit python-dotenv playwright openai tavily-python'''
-
-
-After installing Playwright, make sure to install browsers:
-
+```bash
 playwright install chromium
+```
 
-🔑 Environment Variables
+---
 
-Create a .env file in the project root:
+## 🔑 Environment Variables
 
-GEMINI_API_KEY=your_gemini_api_key
-TAVILY_API_KEY=your_tavily_api_key
+Create a `.env` file in the project root:
 
-#🚀 Running the Project
+```env
+# Google Gemini API Key (OpenAI-compatible endpoint)
+GEMINI_API_KEY=your_gemini_api_key_here
 
-Run with Chainlit:
+# Tavily API Key
+TAVILY_API_KEY=your_tavily_api_key_here
+```
 
+Create an example env file for others:
+
+```bash
+cp .env .env.example
+```
+
+---
+
+## 🚀 Running the Project
+
+Start the chat interface:
+
+```bash
 chainlit run main.py
-# chainlit 
-this is a lightweight front that easily implemntable
+```
 
+Run with auto-reload (useful for dev):
 
-This starts a local UI where you can chat with the agent.
+```bash
+chainlit run main.py -w
+```
 
-🛠 Workflow
+---
 
-Start Chat
-The agent asks for:
+## 🛠 How It Works
 
-Country (e.g., Germany)
+1. **Start Chat**
+   The agent asks for:
 
-Bachelor’s degree (e.g., BSIT)
+   ```text
+   Country → e.g., Germany
+   Degree  → e.g., BSIT
+   ```
 
-Search
-Tavily API searches for universities matching the requirements.
+2. **Search**
+   Uses Tavily API:
 
-Scraping
+   ```text
+   Searching universities in Germany offering Master’s programs for BSIT...
+   ```
 
-First, tries fetching with aiohttp.
+3. **Scrape**
 
-If blocked or the site requires JavaScript, falls back to Playwright.
+   * Tries `aiohttp` first
+   * Falls back to `Playwright` if blocked
 
-Program Extraction
-Gemini model parses the scraped content and extracts details into structured text.
+4. **Program Extraction**
+   Gemini extracts:
 
-Results Export
-Saves everything into master_programs_full.csv.
+   ```json
+   [
+     {
+       "program_name": "MSc Computer Science",
+       "requirements": "IELTS 6.5, GPA ≥ 3.0, Recommendation letters",
+       "deadlines": "15 July",
+       "fees": "€4,000 per semester",
+       "official_link": "https://www.hm.edu/cs-master"
+     },
+     {
+       "program_name": "MSc Data Engineering",
+       "requirements": "GRE optional, English proficiency required",
+       "deadlines": "31 March",
+       "fees": "Tuition-free",
+       "official_link": "https://www.tum.de/data-eng"
+     }
+   ]
+   ```
 
-📊 Example Output
-University	Country	Degree	Details	URL
-HM Hochschule München	Germany	Master	Program: MSc Computer Science …	https://www.hm.edu/
-...
-🧩 Project Structure
+5. **Results Export**
+   Automatically saved:
+
+   ```bash
+   📑 Finished! Saved 8 programs to master_programs_full.csv
+   ```
+
+---
+
+## 📊 Example Output
+
+**Sample CSV (`master_programs_full.csv`):**
+
+```csv
+University,Country,Degree,Details,URL
+HM Hochschule München,Germany,Master,"MSc Computer Science – IELTS required, Deadline: 15 July, Fees: €4,000/semester, GPA ≥ 3.0",https://www.hm.edu/...
+Technical University Munich,Germany,Master,"MSc Data Engineering – GRE optional, Deadline: 31 March, Tuition-free, Language: English",https://www.tum.de/...
+```
+
+---
+
+## 🧩 Project Structure
+
+```text
 .
-├── main.py               # Main entry point
-├── requirements.txt      # Dependencies
-├── .env                  # API keys
-├── master_programs_full.csv  # Auto-generated results
-└── README.md             # Documentation
+├── main.py                        # Main agent logic
+├── requirements.txt               # Dependencies
+├── .env                           # API keys
+├── .env.example                   # Example env file
+├── master_programs_full.csv        # Auto-generated results
+└── README.md                      # Documentation
+```
 
-🔮 Roadmap
+---
 
- Export results in JSON in addition to CSV
+## 🧑‍💻 Development Commands
 
- Improve Gemini prompt for fully structured outputs
+Format with Black:
 
- Add support for filtering by tuition range
+```bash
+uv pip install black
+black main.py
+```
 
- Docker support for easy deployment
+Lint with Flake8:
 
-🤝 Contributing
+```bash
+uv pip install flake8
+flake8 main.py
+```
 
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+Export results to Excel:
 
+```python
+df.to_excel("master_programs_full.xlsx", index=False)
+```
 
+---
+
+## 🔮 Roadmap
+
+* [ ] Return results as **structured JSON** in addition to CSV
+* [ ] Add filtering by tuition range or deadlines
+* [ ] Docker support for deployment
+* [ ] Multi-language support
+
+---
+
+## 🤝 Contributing
+
+```bash
+# 1. Fork the repo
+git clone https://github.com/your-username/masters-program-finder.git
+
+# 2. Create a new branch
+git checkout -b feature/my-feature
+
+# 3. Commit changes
+git commit -m "Added my feature"
+
+# 4. Push branch
+git push origin feature/my-feature
+
+# 5. Open Pull Request on GitHub
+```
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+See [LICENSE](LICENSE) for details.
+
+---
+
+👉 This version now **wraps every single command/output in blocks** so they display properly on GitHub.
+
+Do you also want me to include a **full "Demo Walkthrough" section with screenshots or GIFs** of the Chainlit chat interface so readers see how the bot interacts?
