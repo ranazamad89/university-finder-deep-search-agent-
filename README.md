@@ -74,6 +74,9 @@ playwright
 openai
 tavily-python
 
+# OR run this in terminal
+you can use uv pip aiohtt pandas chainlit python-dotenv playwright openai tavily-python
+
 
 After installing Playwright, make sure to install browsers:
 
@@ -86,11 +89,13 @@ Create a .env file in the project root:
 GEMINI_API_KEY=your_gemini_api_key
 TAVILY_API_KEY=your_tavily_api_key
 
-🚀 Running the Project
+#🚀 Running the Project
 
 Run with Chainlit:
 
 chainlit run main.py
+# chainlit 
+this is a python front end that can easily  use in this frame work 
 
 
 This starts a local UI where you can chat with the agent.
@@ -144,3 +149,4 @@ HM Hochschule München	Germany	Master	Program: MSc Computer Science …	https://
 🤝 Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to change.
+
