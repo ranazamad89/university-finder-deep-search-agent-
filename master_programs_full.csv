@@ -1,0 +1,56 @@
+University,Country,Degree,Details,URL
+Master Programmes - HM Hochschule München University of ...,Germany,Master,"I am sorry, but I was unable to fetch the content from the provided URL: `https://www.hm.edu/en/course_offerings/master_study_courses/index.en.html`. Therefore, I cannot extract any information about the Master programs.",https://www.hm.edu/en/course_offerings/master_study_courses/index.en.html
+Schiller International University | Bachelor & Master Degree,Germany,Master,"Based on the provided content, no specific Master's programs with their detailed admission requirements, deadlines, or fees are explicitly confirmed. The homepage mentions ""Bachelor & Master Degree"" generally, but the other provided URLs lead to CSS files or specific Bachelor's degree program pages.",https://www.schiller.edu/
+Study and Research in Germany - Duke German,Germany,Master,"Based on the provided web page content, there are no Master's programs explicitly confirmed or offered by Duke University's Department of German Studies.
+
+The page ""Study and Research in Germany"" serves as a resource page, directing users to external organizations like the German Academic Exchange Service (DAAD) to find information on studying in Germany, including a database of international degree programs (Bachelor, Master, PhD) offered by German institutions.
+
+Therefore, no Master programs can be extracted from the provided pages.",https://german.duke.edu/research/study-research-germany
+Explore Schiller Bachelor & Master Degree Programs | SIU,Germany,Master,,https://www.schiller.edu/programs/
+WHU,Germany,Master,"Here are the Master programs explicitly confirmed on the provided pages:
+
+```json
+[
+  {
+    ""Program name"": ""Master in Management"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-science-programs/master-in-management/""
+  },
+  {
+    ""Program name"": ""Master in Finance"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-science-programs/master-in-finance/""
+  },
+  {
+    ""Program name"": ""Master in Entrepreneurship"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-science-programs/master-in-entrepreneurship/""
+  },
+  {
+    ""Program name"": ""Master in International Business"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-science-programs/master-in-international-business/""
+  },
+  {
+    ""Program name"": ""Master in Business Analytics"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-science-programs/master-in-business-analytics/""
+  },
+  {
+    ""Program name"": ""Part-Time Master in Management"",
+    ""Admission requirements"": ""Not explicitly listed on the provided pages."",
+    ""Deadlines and fees"": ""Not explicitly listed on the provided pages."",
+    ""Official program link"": ""https://www.whu.edu/en/programs/master-of-arts-programs/part-time-master-in-management/""
+  }
+]
+```",https://www.whu.edu/en/
+Bachelor's & master's degrees in Europe - EU Business School,Germany,Master,,https://www.euruni.edu/en/Programs/programs.html
+Degrees taught in English | DIT - Technische Hochschule Deggendorf,Germany,Master,"I am sorry, but I was unable to fetch the content from the provided URL: `https://ec.dit.edu/studying-in-english`. Therefore, I cannot extract any Master programs or related information.
+
+Please ensure the URL is correct and accessible, or provide the content in another way.",https://ec.dit.edu/studying-in-english
+KIT - Business unit Studium und Lehre - Master's Degree Programs,Germany,Master,,https://www.sle.kit.edu/english/vorstudium/83.php
