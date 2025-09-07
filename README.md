@@ -1,6 +1,6 @@
 Perfect 👍 you want **every command in the README wrapped inside fenced code blocks** so GitHub shows them properly formatted and copy-paste friendly. I’ll rewrite the README with **all commands and sample outputs in blocks**.
 # Workflow vedio 
-   ``` (https://www.linkedin.com/posts/muhammadzamad_excited-to-share-my-latest-project-master-activity-7367911006234128385-hr0P?utm_source=share&utm_medium=member_android&rcm=ACoAAEkJAF8BT5GCFx1qhWVaWFhYAnfvyTT_jZE) ```
+   [(https://www.linkedin.com/posts/muhammadzamad_excited-to-share-my-latest-project-master-activity-7367911006234128385-hr0P?utm_source=share&utm_medium=member_android&rcm=ACoAAEkJAF8BT5GCFx1qhWVaWFhYAnfvyTT_jZE) ]
    
 Here’s the **final detailed README.md** ⬇️
 
@@ -238,6 +238,7 @@ git push origin feature/my-feature
 ```
 
 ---
+
 
 
 
